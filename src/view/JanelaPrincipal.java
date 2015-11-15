@@ -26,7 +26,17 @@ public class JanelaPrincipal extends JFrame
 
         criarPropriedades();
 
-        new JanelaPrincipal();
+        if (!new File(Constants.DB.ARQUIVO).exists())
+        {
+            Database db = new Database();
+
+            db.execute(Constants.DB.CREATE_DATABASE);
+
+            db.close();
+
+            new JanelaOpcoes();
+        } else
+            new JanelaPrincipal();
 
     }
 

@@ -2,12 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76c24e13-7a01-40fa-8e24-3acb6aedc448" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Boletim/control/Database.class" afterPath="$PROJECT_DIR$/out/production/Boletim/control/Database.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Boletim/view/InterfaceNota$1.class" afterPath="$PROJECT_DIR$/out/production/Boletim/view/InterfaceNota$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Boletim/view/InterfaceNota$ButtonHandler.class" afterPath="$PROJECT_DIR$/out/production/Boletim/view/InterfaceNota$ButtonHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Boletim/view/InterfaceNota.class" afterPath="$PROJECT_DIR$/out/production/Boletim/view/InterfaceNota.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Boletim/view/JanelaBoletim$1.class" afterPath="$PROJECT_DIR$/out/production/Boletim/view/JanelaBoletim$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Boletim/view/JanelaBoletim$2.class" afterPath="$PROJECT_DIR$/out/production/Boletim/view/JanelaBoletim$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Boletim/view/JanelaBoletim$ButtonHandler.class" afterPath="$PROJECT_DIR$/out/production/Boletim/view/JanelaBoletim$ButtonHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Boletim/view/JanelaBoletim.class" afterPath="$PROJECT_DIR$/out/production/Boletim/view/JanelaBoletim.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Boletim/view/JanelaPrincipal$ButtonHandler.class" afterPath="$PROJECT_DIR$/out/production/Boletim/view/JanelaPrincipal$ButtonHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Boletim/view/JanelaPrincipal.class" afterPath="$PROJECT_DIR$/out/production/Boletim/view/JanelaPrincipal.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/boletim.db" afterPath="$PROJECT_DIR$/boletim.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/control/Database.java" afterPath="$PROJECT_DIR$/src/control/Database.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/control/Constants.java" afterPath="$PROJECT_DIR$/src/control/Constants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/InterfaceDisciplina.java" afterPath="$PROJECT_DIR$/src/view/InterfaceDisciplina.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/InterfaceNota.java" afterPath="$PROJECT_DIR$/src/view/InterfaceNota.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/JanelaBoletim.java" afterPath="$PROJECT_DIR$/src/view/JanelaBoletim.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/JanelaDisciplinas.java" afterPath="$PROJECT_DIR$/src/view/JanelaDisciplinas.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/JanelaOpcoes.java" afterPath="$PROJECT_DIR$/src/view/JanelaOpcoes.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/JanelaPrincipal.java" afterPath="$PROJECT_DIR$/src/view/JanelaPrincipal.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/boletim.properties" afterPath="$PROJECT_DIR$/boletim.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Boletim.iws" />
@@ -51,61 +64,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JanelaPrincipal.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/JanelaPrincipal.java">
+      <file leaf-file-name="InterfaceDisciplina.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/InterfaceDisciplina.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#JanelaPrincipal#0;class#JanelaPrincipal#0" expanded="false" />
-                <element signature="method#setButtonIcons#0;class#JanelaPrincipal#0" expanded="false" />
-                <element signature="method#setLookAndFeel#0;class#JanelaPrincipal#0" expanded="false" />
-                <element signature="method#criarPropriedades#0;class#JanelaPrincipal#0" expanded="false" />
-                <element signature="class#ButtonHandler#0;class#JanelaPrincipal#0" expanded="false" />
+                <element signature="method#InterfaceDisciplina#0;class#InterfaceDisciplina#0" expanded="false" />
+                <element signature="class#992:1222" expanded="false" />
+                <element signature="class#ButtonHandler#0;class#InterfaceDisciplina#0" expanded="false" />
+                <element signature="method#preencherCampos#0;class#InterfaceDisciplina#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JanelaBoletim.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/JanelaBoletim.java">
+      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/control/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="179" column="4" selection-start-line="179" selection-start-column="4" selection-end-line="179" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.52397263">
+              <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="class#1178:1332" expanded="false" />
-                <element signature="method#JanelaBoletim#0;class#JanelaBoletim#0" expanded="false" />
-                <element signature="class#1635:2080" expanded="false" />
-                <element signature="method#setButtonIcons#0;class#JanelaBoletim#0" expanded="false" />
-                <element signature="method#preencheTabela#0;class#JanelaBoletim#0" expanded="false" />
-                <element signature="method#configuraTabela#0;class#JanelaBoletim#0" expanded="false" />
-                <element signature="method#setProperties#0;class#JanelaBoletim#0" expanded="false" />
-                <element signature="method#removerNota#0;class#JanelaBoletim#0" expanded="false" />
-                <element signature="class#ButtonHandler#0;class#JanelaBoletim#0" expanded="false" />
-                <element signature="method#actionPerformed#0;class#ButtonHandler#0;class#JanelaBoletim#0" expanded="false" />
-                <element signature="class#CellRenderer#0;class#JanelaBoletim#0" expanded="false" />
-                <element signature="method#getTableCellRendererComponent#0;class#CellRenderer#0;class#JanelaBoletim#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InterfaceNota.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/view/InterfaceNota.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7671233">
-              <caret line="191" column="4" selection-start-line="191" selection-start-column="4" selection-end-line="191" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#InterfaceNota#0;class#InterfaceNota#0" expanded="false" />
-                <element signature="class#1394:1618" expanded="false" />
-                <element signature="method#preencherCampos#0;class#InterfaceNota#0" expanded="false" />
-                <element signature="method#getKeyFromValue#0;class#InterfaceNota#0" expanded="false" />
-                <element signature="class#ButtonHandler#0;class#InterfaceNota#0" expanded="false" />
-                <element signature="method#actionPerformed#0;class#ButtonHandler#0;class#InterfaceNota#0" expanded="false" />
-                <marker date="1447568172164" expanded="false" signature="2652:3867" placeholder="..." />
+                <element signature="class#Properties#0;class#Constants#0" expanded="false" />
+                <element signature="class#Keys#0;class#Properties#0;class#Constants#0" expanded="false" />
+                <element signature="class#Tipo#0;class#Values#0;class#Properties#0;class#Constants#0" expanded="false" />
+                <element signature="class#Periodo#0;class#Values#0;class#Properties#0;class#Constants#0" expanded="false" />
+                <element signature="class#DB#0;class#Constants#0" expanded="false" />
+                <element signature="class#Mensagens#0;class#Constants#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -126,6 +111,7 @@
         <option value="Matheus Carnelutt" />
       </list>
     </option>
+    <option name="ROOT_SYNC" value="SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -140,20 +126,20 @@
         <option value="$PROJECT_DIR$/boletim.xml" />
         <option value="$PROJECT_DIR$/src/view/JanelaOpcoes.form" />
         <option value="$PROJECT_DIR$/boletim.properties" />
-        <option value="$PROJECT_DIR$/src/view/JanelaOpcoes.java" />
-        <option value="$PROJECT_DIR$/src/control/Constants.java" />
         <option value="$PROJECT_DIR$/src/view/JanelaDisciplinas.form" />
         <option value="$PROJECT_DIR$/src/control/Teste.java" />
         <option value="$PROJECT_DIR$/src/view/JanelaInterfaceDisciplina.form" />
         <option value="$PROJECT_DIR$/src/view/JanelaInterfaceDisciplina.java" />
-        <option value="$PROJECT_DIR$/src/view/JanelaDisciplinas.java" />
         <option value="$PROJECT_DIR$/src/view/JanelaBoletim.form" />
-        <option value="$PROJECT_DIR$/src/view/InterfaceDisciplina.java" />
         <option value="$PROJECT_DIR$/src/view/InterfaceNota.form" />
         <option value="$PROJECT_DIR$/src/control/Database.java" />
+        <option value="$PROJECT_DIR$/src/view/InterfaceNota.java" />
         <option value="$PROJECT_DIR$/src/view/JanelaPrincipal.java" />
         <option value="$PROJECT_DIR$/src/view/JanelaBoletim.java" />
-        <option value="$PROJECT_DIR$/src/view/InterfaceNota.java" />
+        <option value="$PROJECT_DIR$/src/view/JanelaOpcoes.java" />
+        <option value="$PROJECT_DIR$/src/view/JanelaDisciplinas.java" />
+        <option value="$PROJECT_DIR$/src/view/InterfaceDisciplina.java" />
+        <option value="$PROJECT_DIR$/src/control/Constants.java" />
       </list>
     </option>
   </component>
@@ -212,6 +198,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
@@ -250,27 +237,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Boletim" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Boletim" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="control" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -303,6 +271,11 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="829" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+  </component>
+  <component name="Push.Settings">
+    <excluded-roots>
+      <path value="$PROJECT_DIR$/Boletim" />
+    </excluded-roots>
   </component>
   <component name="RunManager" selected="Application.Boletim">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -488,12 +461,18 @@
       <option name="project" value="LOCAL" />
       <updated>1447372233837</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary=" - Melhorei o metodo de montar a tabela&#10; - Ajustei metodos anti-erros&#10; - Inseri o metodo de alterar notas&#10; - Adicionados metodos de controle na classe Database">
+      <created>1447568330069</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1447568330069</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -533,11 +512,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Adicionadas as opções de adicionar e remover notas do Boletim e arrumada a forma de fazer Querys e updates nas tabelas." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionadas as opções de adicionar e remover notas do Boletim e arrumada a forma de fazer Querys e updates nas tabelas." />
+    <MESSAGE value=" - Melhorei o metodo de montar a tabela&#10; - Ajustei metodos anti-erros&#10; - Inseri o metodo de alterar notas&#10; - Adicionados metodos de controle na classe Database" />
+    <option name="LAST_COMMIT_MESSAGE" value=" - Melhorei o metodo de montar a tabela&#10; - Ajustei metodos anti-erros&#10; - Inseri o metodo de alterar notas&#10; - Adicionados metodos de controle na classe Database" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="46" />
+      <option name="time" value="51" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -546,6 +526,75 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/control/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="106" column="4" selection-start-line="106" selection-start-column="4" selection-end-line="106" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Database#0;class#Database#0" expanded="false" />
+            <element signature="method#execute#0;class#Database#0" expanded="false" />
+            <element signature="method#query#0;class#Database#0" expanded="false" />
+            <element signature="method#close#0;class#Database#0" expanded="false" />
+            <element signature="method#getNotCodigo#0;class#Database#0" expanded="false" />
+            <element signature="method#getNota#0;class#Database#0" expanded="false" />
+            <element signature="method#getMedia#0;class#Database#0" expanded="false" />
+            <element signature="method#getSomaNotas#0;class#Database#0" expanded="false" />
+            <element signature="method#getQuantoFalta#0;class#Database#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/JanelaPrincipal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#main#0;class#JanelaPrincipal#0" expanded="false" />
+            <element signature="method#JanelaPrincipal#0;class#JanelaPrincipal#0" expanded="false" />
+            <element signature="method#setButtonIcons#0;class#JanelaPrincipal#0" expanded="false" />
+            <element signature="method#setLookAndFeel#0;class#JanelaPrincipal#0" expanded="false" />
+            <element signature="method#criarPropriedades#0;class#JanelaPrincipal#0" expanded="false" />
+            <element signature="class#ButtonHandler#0;class#JanelaPrincipal#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/JanelaBoletim.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="179" column="4" selection-start-line="179" selection-start-column="4" selection-end-line="179" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#1178:1332" expanded="false" />
+            <element signature="class#1635:2080" expanded="false" />
+            <element signature="method#setButtonIcons#0;class#JanelaBoletim#0" expanded="false" />
+            <element signature="method#preencheTabela#0;class#JanelaBoletim#0" expanded="false" />
+            <element signature="method#setProperties#0;class#JanelaBoletim#0" expanded="false" />
+            <element signature="class#CellRenderer#0;class#JanelaBoletim#0" expanded="false" />
+            <element signature="method#getTableCellRendererComponent#0;class#CellRenderer#0;class#JanelaBoletim#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/InterfaceNota.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#InterfaceNota#0;class#InterfaceNota#0" expanded="false" />
+            <element signature="class#1446:1670" expanded="false" />
+            <element signature="method#preencherCampos#0;class#InterfaceNota#0" expanded="false" />
+            <element signature="method#getKeyFromValue#0;class#InterfaceNota#0" expanded="false" />
+            <element signature="class#ButtonHandler#0;class#InterfaceNota#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#ButtonHandler#0;class#InterfaceNota#0" expanded="false" />
+            <marker date="1447615685936" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/control/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -566,6 +615,7 @@
           <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#main#0;class#JanelaPrincipal#0" expanded="false" />
             <element signature="method#JanelaPrincipal#0;class#JanelaPrincipal#0" expanded="false" />
             <element signature="method#setButtonIcons#0;class#JanelaPrincipal#0" expanded="false" />
             <element signature="method#setLookAndFeel#0;class#JanelaPrincipal#0" expanded="false" />
@@ -582,15 +632,10 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="class#1178:1332" expanded="false" />
-            <element signature="method#JanelaBoletim#0;class#JanelaBoletim#0" expanded="false" />
             <element signature="class#1635:2080" expanded="false" />
             <element signature="method#setButtonIcons#0;class#JanelaBoletim#0" expanded="false" />
             <element signature="method#preencheTabela#0;class#JanelaBoletim#0" expanded="false" />
-            <element signature="method#configuraTabela#0;class#JanelaBoletim#0" expanded="false" />
             <element signature="method#setProperties#0;class#JanelaBoletim#0" expanded="false" />
-            <element signature="method#removerNota#0;class#JanelaBoletim#0" expanded="false" />
-            <element signature="class#ButtonHandler#0;class#JanelaBoletim#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#ButtonHandler#0;class#JanelaBoletim#0" expanded="false" />
             <element signature="class#CellRenderer#0;class#JanelaBoletim#0" expanded="false" />
             <element signature="method#getTableCellRendererComponent#0;class#CellRenderer#0;class#JanelaBoletim#0" expanded="false" />
           </folding>
@@ -604,12 +649,12 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#InterfaceNota#0;class#InterfaceNota#0" expanded="false" />
-            <element signature="class#1394:1618" expanded="false" />
+            <element signature="class#1446:1670" expanded="false" />
             <element signature="method#preencherCampos#0;class#InterfaceNota#0" expanded="false" />
             <element signature="method#getKeyFromValue#0;class#InterfaceNota#0" expanded="false" />
             <element signature="class#ButtonHandler#0;class#InterfaceNota#0" expanded="false" />
             <element signature="method#actionPerformed#0;class#ButtonHandler#0;class#InterfaceNota#0" expanded="false" />
-            <marker date="1447568172164" expanded="false" signature="2652:3867" placeholder="..." />
+            <marker date="1447615685936" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -653,6 +698,7 @@
           <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#main#0;class#JanelaPrincipal#0" expanded="false" />
             <element signature="method#JanelaPrincipal#0;class#JanelaPrincipal#0" expanded="false" />
             <element signature="method#setButtonIcons#0;class#JanelaPrincipal#0" expanded="false" />
             <element signature="method#setLookAndFeel#0;class#JanelaPrincipal#0" expanded="false" />
@@ -669,15 +715,10 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="class#1178:1332" expanded="false" />
-            <element signature="method#JanelaBoletim#0;class#JanelaBoletim#0" expanded="false" />
             <element signature="class#1635:2080" expanded="false" />
             <element signature="method#setButtonIcons#0;class#JanelaBoletim#0" expanded="false" />
             <element signature="method#preencheTabela#0;class#JanelaBoletim#0" expanded="false" />
-            <element signature="method#configuraTabela#0;class#JanelaBoletim#0" expanded="false" />
             <element signature="method#setProperties#0;class#JanelaBoletim#0" expanded="false" />
-            <element signature="method#removerNota#0;class#JanelaBoletim#0" expanded="false" />
-            <element signature="class#ButtonHandler#0;class#JanelaBoletim#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#ButtonHandler#0;class#JanelaBoletim#0" expanded="false" />
             <element signature="class#CellRenderer#0;class#JanelaBoletim#0" expanded="false" />
             <element signature="method#getTableCellRendererComponent#0;class#CellRenderer#0;class#JanelaBoletim#0" expanded="false" />
           </folding>
@@ -691,12 +732,12 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#InterfaceNota#0;class#InterfaceNota#0" expanded="false" />
-            <element signature="class#1394:1618" expanded="false" />
+            <element signature="class#1446:1670" expanded="false" />
             <element signature="method#preencherCampos#0;class#InterfaceNota#0" expanded="false" />
             <element signature="method#getKeyFromValue#0;class#InterfaceNota#0" expanded="false" />
             <element signature="class#ButtonHandler#0;class#InterfaceNota#0" expanded="false" />
             <element signature="method#actionPerformed#0;class#ButtonHandler#0;class#InterfaceNota#0" expanded="false" />
-            <marker date="1447568172164" expanded="false" signature="2652:3867" placeholder="..." />
+            <marker date="1447615685936" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -740,6 +781,7 @@
           <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#main#0;class#JanelaPrincipal#0" expanded="false" />
             <element signature="method#JanelaPrincipal#0;class#JanelaPrincipal#0" expanded="false" />
             <element signature="method#setButtonIcons#0;class#JanelaPrincipal#0" expanded="false" />
             <element signature="method#setLookAndFeel#0;class#JanelaPrincipal#0" expanded="false" />
@@ -788,9 +830,9 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="class#607:761" expanded="false" />
+            <element signature="class#675:829" expanded="false" />
             <element signature="method#JanelaDisciplinas#0;class#JanelaDisciplinas#0" expanded="false" />
-            <element signature="class#1145:1594" expanded="false" />
+            <element signature="class#1213:1662" expanded="false" />
             <element signature="method#setButtonIcons#0;class#JanelaDisciplinas#0" expanded="false" />
             <element signature="class#ButtonHandler#0;class#JanelaDisciplinas#0" expanded="false" />
             <element signature="method#actionPerformed#0;class#ButtonHandler#0;class#JanelaDisciplinas#0" expanded="false" />
@@ -837,9 +879,9 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="class#607:761" expanded="false" />
+            <element signature="class#675:829" expanded="false" />
             <element signature="method#JanelaDisciplinas#0;class#JanelaDisciplinas#0" expanded="false" />
-            <element signature="class#1145:1594" expanded="false" />
+            <element signature="class#1213:1662" expanded="false" />
             <element signature="method#setButtonIcons#0;class#JanelaDisciplinas#0" expanded="false" />
             <element signature="class#ButtonHandler#0;class#JanelaDisciplinas#0" expanded="false" />
             <element signature="method#actionPerformed#0;class#ButtonHandler#0;class#JanelaDisciplinas#0" expanded="false" />
@@ -867,6 +909,7 @@
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#main#0;class#JanelaPrincipal#0" expanded="false" />
             <element signature="method#JanelaPrincipal#0;class#JanelaPrincipal#0" expanded="false" />
             <element signature="method#setButtonIcons#0;class#JanelaPrincipal#0" expanded="false" />
             <element signature="method#setLookAndFeel#0;class#JanelaPrincipal#0" expanded="false" />
@@ -889,6 +932,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#main#0;class#JanelaPrincipal#0" expanded="false" />
             <element signature="method#JanelaPrincipal#0;class#JanelaPrincipal#0" expanded="false" />
             <element signature="method#setButtonIcons#0;class#JanelaPrincipal#0" expanded="false" />
             <element signature="method#setLookAndFeel#0;class#JanelaPrincipal#0" expanded="false" />
@@ -976,18 +1020,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/JanelaOpcoes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.05308219">
-          <caret line="124" column="45" selection-start-line="124" selection-start-column="45" selection-end-line="124" selection-end-column="45" />
-          <folding>
-            <element signature="method#JanelaOpcoes#0;class#JanelaOpcoes#0" expanded="false" />
-            <element signature="class#ButtonHandler#0;class#JanelaOpcoes#0" expanded="false" />
-            <element signature="method#salvarInformacoes#0;class#JanelaOpcoes#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/InterfaceDisciplina.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
@@ -1003,37 +1035,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/InterfaceDisciplina.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0239726">
-          <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#InterfaceDisciplina#0;class#InterfaceDisciplina#0" expanded="false" />
-            <element signature="class#940:1170" expanded="false" />
-            <element signature="e#1515#1516#0" expanded="false" />
-            <element signature="e#1544#1545#0" expanded="false" />
-            <element signature="class#ButtonHandler#0;class#InterfaceDisciplina#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/JanelaDisciplinas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50342464">
-          <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="class#607:761" expanded="false" />
-            <element signature="method#JanelaDisciplinas#0;class#JanelaDisciplinas#0" expanded="false" />
-            <element signature="class#1145:1594" expanded="false" />
-            <element signature="method#setButtonIcons#0;class#JanelaDisciplinas#0" expanded="false" />
-            <element signature="class#ButtonHandler#0;class#JanelaDisciplinas#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#ButtonHandler#0;class#JanelaDisciplinas#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/security/ProtectionDomain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33248082">
@@ -1041,16 +1042,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/control/Constants.java">
+    <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5217391">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.04336735">
+          <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/InterfaceNota.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59246576">
+          <caret line="74" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
           <folding>
-            <element signature="class#Properties#0;class#Constants#0" expanded="false" />
-            <element signature="class#Keys#0;class#Properties#0;class#Constants#0" expanded="false" />
-            <element signature="class#Tipo#0;class#Values#0;class#Properties#0;class#Constants#0" expanded="false" />
-            <element signature="class#Periodo#0;class#Values#0;class#Properties#0;class#Constants#0" expanded="false" />
-            <element signature="class#DB#0;class#Constants#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#InterfaceNota#0;class#InterfaceNota#0" expanded="false" />
+            <element signature="class#1446:1670" expanded="false" />
+            <element signature="method#preencherCampos#0;class#InterfaceNota#0" expanded="false" />
+            <element signature="method#getKeyFromValue#0;class#InterfaceNota#0" expanded="false" />
+            <element signature="class#ButtonHandler#0;class#InterfaceNota#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#ButtonHandler#0;class#InterfaceNota#0" expanded="false" />
+            <marker date="1447615685936" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/JanelaBoletim.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5099099">
+          <caret line="395" column="43" selection-start-line="395" selection-start-column="36" selection-end-line="395" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#1178:1332" expanded="false" />
+            <element signature="class#1635:2080" expanded="false" />
+            <element signature="method#setButtonIcons#0;class#JanelaBoletim#0" expanded="false" />
+            <element signature="method#preencheTabela#0;class#JanelaBoletim#0" expanded="false" />
+            <element signature="method#setProperties#0;class#JanelaBoletim#0" expanded="false" />
+            <element signature="class#CellRenderer#0;class#JanelaBoletim#0" expanded="false" />
+            <element signature="method#getTableCellRendererComponent#0;class#CellRenderer#0;class#JanelaBoletim#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/JanelaOpcoes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8150685">
+          <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
+          <folding>
+            <element signature="method#JanelaOpcoes#0;class#JanelaOpcoes#0" expanded="false" />
+            <element signature="class#1313:1575" expanded="false" />
+            <element signature="class#ButtonHandler#0;class#JanelaOpcoes#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#ButtonHandler#0;class#JanelaOpcoes#0" expanded="false" />
+            <element signature="method#preencherCampos#0;class#JanelaOpcoes#0" expanded="false" />
+            <element signature="method#salvarInformacoes#0;class#JanelaOpcoes#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/JanelaDisciplinas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.989726">
+          <caret line="196" column="4" selection-start-line="196" selection-start-column="4" selection-end-line="196" selection-end-column="4" />
+          <folding>
+            <element signature="class#675:829" expanded="false" />
+            <element signature="method#JanelaDisciplinas#0;class#JanelaDisciplinas#0" expanded="false" />
+            <element signature="class#1213:1662" expanded="false" />
+            <element signature="method#setButtonIcons#0;class#JanelaDisciplinas#0" expanded="false" />
+            <element signature="method#preencheTabela#0;class#JanelaDisciplinas#0" expanded="false" />
+            <element signature="method#gerarRelatorio#0;class#JanelaDisciplinas#0" expanded="false" />
+            <element signature="class#ButtonHandler#0;class#JanelaDisciplinas#0" expanded="false" />
+            <element signature="method#actionPerformed#0;class#ButtonHandler#0;class#JanelaDisciplinas#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/JanelaPrincipal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4760274">
+          <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#main#0;class#JanelaPrincipal#0" expanded="false" />
+            <element signature="method#JanelaPrincipal#0;class#JanelaPrincipal#0" expanded="false" />
+            <element signature="method#setButtonIcons#0;class#JanelaPrincipal#0" expanded="false" />
+            <element signature="method#setLookAndFeel#0;class#JanelaPrincipal#0" expanded="false" />
+            <element signature="method#criarPropriedades#0;class#JanelaPrincipal#0" expanded="false" />
+            <element signature="class#ButtonHandler#0;class#JanelaPrincipal#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1074,56 +1151,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/JanelaPrincipal.java">
+    <entry file="file://$PROJECT_DIR$/src/view/InterfaceDisciplina.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#JanelaPrincipal#0;class#JanelaPrincipal#0" expanded="false" />
-            <element signature="method#setButtonIcons#0;class#JanelaPrincipal#0" expanded="false" />
-            <element signature="method#setLookAndFeel#0;class#JanelaPrincipal#0" expanded="false" />
-            <element signature="method#criarPropriedades#0;class#JanelaPrincipal#0" expanded="false" />
-            <element signature="class#ButtonHandler#0;class#JanelaPrincipal#0" expanded="false" />
+            <element signature="method#InterfaceDisciplina#0;class#InterfaceDisciplina#0" expanded="false" />
+            <element signature="class#992:1222" expanded="false" />
+            <element signature="class#ButtonHandler#0;class#InterfaceDisciplina#0" expanded="false" />
+            <element signature="method#preencherCampos#0;class#InterfaceDisciplina#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/JanelaBoletim.java">
+    <entry file="file://$PROJECT_DIR$/src/control/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="179" column="4" selection-start-line="179" selection-start-column="4" selection-end-line="179" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.52397263">
+          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#1178:1332" expanded="false" />
-            <element signature="method#JanelaBoletim#0;class#JanelaBoletim#0" expanded="false" />
-            <element signature="class#1635:2080" expanded="false" />
-            <element signature="method#setButtonIcons#0;class#JanelaBoletim#0" expanded="false" />
-            <element signature="method#preencheTabela#0;class#JanelaBoletim#0" expanded="false" />
-            <element signature="method#configuraTabela#0;class#JanelaBoletim#0" expanded="false" />
-            <element signature="method#setProperties#0;class#JanelaBoletim#0" expanded="false" />
-            <element signature="method#removerNota#0;class#JanelaBoletim#0" expanded="false" />
-            <element signature="class#ButtonHandler#0;class#JanelaBoletim#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#ButtonHandler#0;class#JanelaBoletim#0" expanded="false" />
-            <element signature="class#CellRenderer#0;class#JanelaBoletim#0" expanded="false" />
-            <element signature="method#getTableCellRendererComponent#0;class#CellRenderer#0;class#JanelaBoletim#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/InterfaceNota.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7671233">
-          <caret line="191" column="4" selection-start-line="191" selection-start-column="4" selection-end-line="191" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#InterfaceNota#0;class#InterfaceNota#0" expanded="false" />
-            <element signature="class#1394:1618" expanded="false" />
-            <element signature="method#preencherCampos#0;class#InterfaceNota#0" expanded="false" />
-            <element signature="method#getKeyFromValue#0;class#InterfaceNota#0" expanded="false" />
-            <element signature="class#ButtonHandler#0;class#InterfaceNota#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#ButtonHandler#0;class#InterfaceNota#0" expanded="false" />
-            <marker date="1447568172164" expanded="false" signature="2652:3867" placeholder="..." />
+            <element signature="class#Properties#0;class#Constants#0" expanded="false" />
+            <element signature="class#Keys#0;class#Properties#0;class#Constants#0" expanded="false" />
+            <element signature="class#Tipo#0;class#Values#0;class#Properties#0;class#Constants#0" expanded="false" />
+            <element signature="class#Periodo#0;class#Values#0;class#Properties#0;class#Constants#0" expanded="false" />
+            <element signature="class#DB#0;class#Constants#0" expanded="false" />
+            <element signature="class#Mensagens#0;class#Constants#0" expanded="false" />
           </folding>
         </state>
       </provider>

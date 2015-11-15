@@ -329,7 +329,7 @@ public class JanelaBoletim extends JFrame
 
     private void removerNota()
     {
-        int opcao = JOptionPane.showConfirmDialog(null, "Tem certeza que deseja remover essa nota?", "Aviso", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        int opcao = JOptionPane.showConfirmDialog(null, Constants.Mensagens.AVISO_REMOVER_NOTA, "Aviso", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
 
         if (opcao == JOptionPane.YES_OPTION)
         {
@@ -367,9 +367,9 @@ public class JanelaBoletim extends JFrame
                 int NotPeriodo = tblBoletim.getSelectedColumn();
 
                 if (NotPeriodo >= tblBoletim.getColumnCount() - 2 || tblBoletim.getSelectedColumn() == 0)
-                    JOptionPane.showMessageDialog(null, "Esse campo e preenchido automaticamente.", "Aviso", JOptionPane.WARNING_MESSAGE);
+                    JOptionPane.showMessageDialog(null, Constants.Mensagens.CAMPO_PREENCHIDO_AUTOMATICAMENTE, "Aviso", JOptionPane.WARNING_MESSAGE);
                 else if ((Float) tblBoletim.getValueAt(tblBoletim.getSelectedRow(), tblBoletim.getSelectedColumn()) != 0.0)
-                    JOptionPane.showMessageDialog(null, "Essa nota ja foi preenchida.\nPor favor, exclua a nota para poder adicionar.", "Aviso", JOptionPane.WARNING_MESSAGE);
+                    JOptionPane.showMessageDialog(null, Constants.Mensagens.NOTA_JA_PREENCHIDA, "Aviso", JOptionPane.WARNING_MESSAGE);
                 else
                     new InterfaceNota(InterfaceNota.MODO_INCLUIR, NotDisciplina, NotPeriodo, periodo);
             }
@@ -377,9 +377,9 @@ public class JanelaBoletim extends JFrame
             if (e.getSource().equals(btnRemover))
             {
                 if (tblBoletim.getSelectedColumn() >= tblBoletim.getColumnCount() - 2 || tblBoletim.getSelectedColumn() == 0)
-                    JOptionPane.showMessageDialog(null, "Esse campo e preenchido automaticamente.", "Aviso", JOptionPane.WARNING_MESSAGE);
+                    JOptionPane.showMessageDialog(null, Constants.Mensagens.CAMPO_PREENCHIDO_AUTOMATICAMENTE, "Aviso", JOptionPane.WARNING_MESSAGE);
                 else if ((Float) tblBoletim.getValueAt(tblBoletim.getSelectedRow(), tblBoletim.getSelectedColumn()) == 0.0)
-                    JOptionPane.showMessageDialog(null, "Essa nota ainda nao foi preenchida.\nPor favor, escolha outra nota.", "Aviso", JOptionPane.WARNING_MESSAGE);
+                    JOptionPane.showMessageDialog(null, Constants.Mensagens.NOTA_NAO_PREENCHIDA, "Aviso", JOptionPane.WARNING_MESSAGE);
                 else
                     removerNota();
 
@@ -391,9 +391,9 @@ public class JanelaBoletim extends JFrame
                 int NotPeriodo = tblBoletim.getSelectedColumn();
 
                 if (tblBoletim.getSelectedColumn() >= tblBoletim.getColumnCount() - 2 || tblBoletim.getSelectedColumn() == 0)
-                    JOptionPane.showMessageDialog(null, "Esse campo e preenchido automaticamente.", "Aviso", JOptionPane.WARNING_MESSAGE);
+                    JOptionPane.showMessageDialog(null, Constants.Mensagens.CAMPO_PREENCHIDO_AUTOMATICAMENTE, "Aviso", JOptionPane.WARNING_MESSAGE);
                 else if ((Float) tblBoletim.getValueAt(tblBoletim.getSelectedRow(), tblBoletim.getSelectedColumn()) == 0.0)
-                    JOptionPane.showMessageDialog(null, "Essa nota ainda nao foi preenchida.\nPor favor, escolha outra nota.", "Aviso", JOptionPane.WARNING_MESSAGE);
+                    JOptionPane.showMessageDialog(null, Constants.Mensagens.NOTA_NAO_PREENCHIDA, "Aviso", JOptionPane.WARNING_MESSAGE);
                 else
                     new InterfaceNota(InterfaceNota.MODO_ALTERAR, NotDisciplina, NotPeriodo, periodo);
             }

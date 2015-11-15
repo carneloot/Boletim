@@ -1,6 +1,7 @@
 package view;
 
 import control.Constants;
+import control.Database;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -29,6 +30,10 @@ public class JanelaOpcoes extends JFrame
     private ButtonGroup bgTipos = new ButtonGroup();
     private ButtonGroup bgPeriodo = new ButtonGroup();
 
+    public static final int PERIODO_SEMESTRE = 1;
+    public static final int PERIODO_TRIMESTRE = 2;
+    public static final int PERIODO_BIMESTRE = 3;
+
     public JanelaOpcoes()
     {
         super("Boletim - Opcoes");
@@ -50,6 +55,10 @@ public class JanelaOpcoes extends JFrame
         btnSalvar.addActionListener(hdrButton);
         btnCancelar.addActionListener(hdrButton);
 
+        rbtnSemestre.addActionListener(hdrButton);
+        rbtnTrimestre.addActionListener(hdrButton);
+        rbtnBimestre.addActionListener(hdrButton);
+
         bgTipos.add(rbtnAcumulativa);
         bgTipos.add(rbtnPorcentagem);
 
@@ -58,6 +67,20 @@ public class JanelaOpcoes extends JFrame
         bgPeriodo.add(rbtnSemestre);
 
         preencherCampos();
+
+        txtProva.setEnabled(false);
+        txtProva.setToolTipText(Constants.Mensagens.FUNCAO_NAO_IMPLEMENTADA);
+
+        txtTrabalho.setEnabled(false);
+        txtTrabalho.setToolTipText(Constants.Mensagens.FUNCAO_NAO_IMPLEMENTADA);
+
+        txtTarefas.setEnabled(false);
+        txtTarefas.setToolTipText(Constants.Mensagens.FUNCAO_NAO_IMPLEMENTADA);
+
+        rbtnAcumulativa.setEnabled(false);
+
+        rbtnPorcentagem.setEnabled(false);
+        rbtnPorcentagem.setToolTipText(Constants.Mensagens.FUNCAO_NAO_IMPLEMENTADA);
 
         pack();
         setLocationRelativeTo(null);
@@ -90,13 +113,18 @@ public class JanelaOpcoes extends JFrame
 
                 if (total != 10)
                 {
-                    JOptionPane.showMessageDialog(null, "A soma dos pesos nao corresponde a 10,0.\nPor favor, corrija o erro.", "Erro", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, Constants.Mensagens.ERRO_SOMA_PESOS, "Erro", JOptionPane.ERROR_MESSAGE);
                 } else
                 {
                     salvarInformacoes();
                     JanelaOpcoes.this.dispose();
                     new JanelaPrincipal();
                 }
+            }
+
+            if (e.getSource().equals(rbtnTrimestre) || e.getSource().equals(rbtnBimestre) || e.getSource().equals(rbtnSemestre))
+            {
+                JOptionPane.showMessageDialog(null, Constants.Mensagens.MUDANCA_DE_PERIODO, "Aviso", JOptionPane.WARNING_MESSAGE);
             }
         }
     }
@@ -170,12 +198,68 @@ public class JanelaOpcoes extends JFrame
             props.setProperty(Constants.Properties.Keys.TIPO, Constants.Properties.Values.Tipo.PORCENTAGEM);
 
         // Salvar Periodo
+
+        int periodoSelecionado = 0;
+        int periodoConfigurado = 0;
+
         if (rbtnSemestre.isSelected())
-            props.setProperty(Constants.Properties.Keys.PERIODO, Constants.Properties.Values.Periodo.SEMESTRE);
+            periodoSelecionado = PERIODO_SEMESTRE;
         if (rbtnBimestre.isSelected())
-            props.setProperty(Constants.Properties.Keys.PERIODO, Constants.Properties.Values.Periodo.BIMESTRE);
+            periodoSelecionado = PERIODO_BIMESTRE;
         if (rbtnTrimestre.isSelected())
-            props.setProperty(Constants.Properties.Keys.PERIODO, Constants.Properties.Values.Periodo.TRIMESTRE);
+            periodoSelecionado = PERIODO_TRIMESTRE;
+
+        try
+        {
+            Properties props2 = new Properties();
+
+            props2.load(new FileInputStream(new File(Constants.Properties.ARQUIVO)));
+
+            switch (props2.getProperty(Constants.Properties.Keys.PERIODO))
+            {
+                case Constants.Properties.Values.Periodo.SEMESTRE:
+                    periodoConfigurado = PERIODO_SEMESTRE;
+                    break;
+
+                case Constants.Properties.Values.Periodo.TRIMESTRE:
+                    periodoConfigurado = PERIODO_TRIMESTRE;
+                    break;
+
+                case Constants.Properties.Values.Periodo.BIMESTRE:
+                    periodoConfigurado = PERIODO_BIMESTRE;
+                    break;
+            }
+
+            if (periodoSelecionado != periodoConfigurado)
+            {
+                Database db = new Database();
+
+                db.execute("DELETE FROM NOTAS");
+
+                db.close();
+            }
+
+            switch (periodoSelecionado)
+            {
+                case PERIODO_SEMESTRE:
+                    props.setProperty(Constants.Properties.Keys.PERIODO, Constants.Properties.Values.Periodo.SEMESTRE);
+                    break;
+
+                case PERIODO_TRIMESTRE:
+                    props.setProperty(Constants.Properties.Keys.PERIODO, Constants.Properties.Values.Periodo.TRIMESTRE);
+                    break;
+
+                case PERIODO_BIMESTRE:
+                    props.setProperty(Constants.Properties.Keys.PERIODO, Constants.Properties.Values.Periodo.BIMESTRE);
+                    break;
+            }
+
+        } catch (Exception ex)
+        {
+            ex.printStackTrace();
+        }
+
+
 
         try
         {

@@ -1,11 +1,13 @@
 package view;
 
+import control.Constants;
 import control.Database;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 import java.awt.event.*;
+import java.lang.invoke.ConstantCallSite;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.regex.PatternSyntaxException;
@@ -204,7 +206,7 @@ public class JanelaDisciplinas extends JFrame
 
             if (e.getSource().equals(btnRemover))
             {
-                int opcao = JOptionPane.showConfirmDialog(null, "Tem certeza que deseja excluir essa disciplina?", "Aviso", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+                int opcao = JOptionPane.showConfirmDialog(null, Constants.Mensagens.AVISO_REMOVER_DISCIPLINA, "Aviso", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
 
                 if (opcao == JOptionPane.YES_OPTION)
                 {

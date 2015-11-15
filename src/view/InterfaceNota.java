@@ -44,6 +44,8 @@ public class InterfaceNota extends JDialog
         setResizable(false);
         setModal(true);
 
+        getRootPane().setDefaultButton(btnSalvar);
+
         this.addWindowListener(new WindowAdapter()
         {
             @Override
@@ -63,9 +65,6 @@ public class InterfaceNota extends JDialog
 
         btnCancelar.addActionListener(hdrButton);
         btnSalvar.addActionListener(hdrButton);
-
-        if (modo == MODO_INCLUIR)
-            txtNota.requestFocus();
 
         pack();
         setLocationRelativeTo(null);
@@ -174,6 +173,8 @@ public class InterfaceNota extends JDialog
 
             cbbDisciplina.setSelectedItem(getKeyFromValue(disciplinas, NotDisciplina));
         }
+
+        txtNota.requestFocus();
     }
 
     public static Object getKeyFromValue(Map hm, Object value)
@@ -229,7 +230,7 @@ public class InterfaceNota extends JDialog
 
                         String sql = String.format(
                                 "UPDATE NOTAS SET NOTNOTA = %s WHERE NOTCODIGO = %d",
-                                txtNota.getText().trim().replace(',','.'),
+                                txtNota.getText().trim().replace(',', '.'),
                                 db.getNotCodigo(NotDisciplina, NotPeriodo)
                         );
 

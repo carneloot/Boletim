@@ -33,6 +33,8 @@ public class InterfaceDisciplina extends JDialog
         setResizable(false);
         setModal(true);
 
+        getRootPane().setDefaultButton(btnSalvar);
+
         this.addWindowListener(new WindowAdapter()
         {
             @Override
