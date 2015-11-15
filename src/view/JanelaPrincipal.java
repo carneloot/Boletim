@@ -1,6 +1,7 @@
 package view;
 
 import control.Constants;
+import control.Database;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -26,6 +27,7 @@ public class JanelaPrincipal extends JFrame
         criarPropriedades();
 
         new JanelaPrincipal();
+
     }
 
     public JanelaPrincipal()

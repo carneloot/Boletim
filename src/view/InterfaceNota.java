@@ -30,13 +30,13 @@ public class InterfaceNota extends JDialog
     private HashMap<String, Integer> disciplinas = new HashMap<>();
     private HashMap<String, Integer> periodos = new HashMap<>();
 
-    private int id, modo;
+    private int modo, NotDisciplina, NotPeriodo;
     private String periodo;
 
     public static final int MODO_INCLUIR = 0;
     public static final int MODO_ALTERAR = 1;
 
-    public InterfaceNota(int modo, int id, String periodo)
+    public InterfaceNota(int modo, int NotDisciplina, int NotPeriodo, String periodo)
     {
         setTitle("Boletim - Nota");
         setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
@@ -54,14 +54,18 @@ public class InterfaceNota extends JDialog
             }
         });
 
-        this.id = id;
         this.modo = modo;
         this.periodo = periodo;
+        this.NotDisciplina = NotDisciplina;
+        this.NotPeriodo = NotPeriodo;
 
         preencherCampos();
 
         btnCancelar.addActionListener(hdrButton);
         btnSalvar.addActionListener(hdrButton);
+
+        if (modo == MODO_INCLUIR)
+            txtNota.requestFocus();
 
         pack();
         setLocationRelativeTo(null);
@@ -70,7 +74,7 @@ public class InterfaceNota extends JDialog
 
     public void preencherCampos()
     {
-        // Seta os elementos do ComboBox
+        // Seta as disciplinas do ComboBox
 
         try
         {
@@ -137,6 +141,8 @@ public class InterfaceNota extends JDialog
             {
                 Database db = new Database();
 
+                int id = db.getNotCodigo(NotDisciplina, NotPeriodo);
+
                 ResultSet rs = db.query("SELECT NOTNOTA, NOTPERIODO, NOTDISCIPLINA FROM NOTAS WHERE NOTCODIGO = " + id);
 
                 cbbPeriodo.setSelectedItem(getKeyFromValue(periodos, rs.getInt(2)));
@@ -160,6 +166,13 @@ public class InterfaceNota extends JDialog
             cbbPeriodo.addActionListener(e -> {
                 cbbPeriodo.setSelectedIndex(periodoSelecionado);
             });
+        }
+
+        if (modo == MODO_INCLUIR)
+        {
+            cbbPeriodo.setSelectedItem(getKeyFromValue(periodos, NotPeriodo));
+
+            cbbDisciplina.setSelectedItem(getKeyFromValue(disciplinas, NotDisciplina));
         }
     }
 
@@ -197,7 +210,28 @@ public class InterfaceNota extends JDialog
                                 disciplinas.get(cbbDisciplina.getSelectedItem()),
                                 txtNota.getText().trim().replace(',', '.'),
                                 periodos.get(cbbPeriodo.getSelectedItem())
-                                );
+                        );
+
+                        db.execute(sql);
+
+                        db.close();
+                    } catch (Exception ex)
+                    {
+                        ex.printStackTrace();
+                    }
+                }
+
+                if (modo == MODO_ALTERAR)
+                {
+                    try
+                    {
+                        Database db = new Database();
+
+                        String sql = String.format(
+                                "UPDATE NOTAS SET NOTNOTA = %s WHERE NOTCODIGO = %d",
+                                txtNota.getText().trim().replace(',','.'),
+                                db.getNotCodigo(NotDisciplina, NotPeriodo)
+                        );
 
                         db.execute(sql);
 

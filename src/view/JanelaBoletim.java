@@ -2,14 +2,18 @@ package view;
 
 import control.Constants;
 import control.Database;
+import net.sf.jasperreports.types.date.DateRangeBaseSQLEqualityClause;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableCellRenderer;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.awt.geom.Arc2D;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -28,7 +32,6 @@ public class JanelaBoletim extends JFrame
     private JButton btnAdicionar;
     private JScrollPane sclTabela;
 
-    private int[][] codigos;
     private ButtonHandler hdrButton = new ButtonHandler();
 
     private String periodo, tipo;
@@ -124,55 +127,45 @@ public class JanelaBoletim extends JFrame
 
             while (rs.next())
             {
-                codigos[tblBoletim.getRowCount()][0] = rs.getInt(1);
+                int DisCodigo = rs.getInt(1);
 
                 switch (periodo)
                 {
                     case Constants.Properties.Values.Periodo.SEMESTRE:
-                        tmdlNotas.addRow(new Object[]{rs.getString(2), "", "", "", ""});
+                        tmdlNotas.addRow(new Object[]{
+                                        DisCodigo,
+                                        rs.getString(2),
+                                        db.getNota(DisCodigo, 1),
+                                        db.getNota(DisCodigo, 2),
+                                        db.getMedia(DisCodigo),
+                                        db.getQuantoFalta(DisCodigo)}
+                        );
                         break;
                     case Constants.Properties.Values.Periodo.TRIMESTRE:
-                        tmdlNotas.addRow(new Object[]{rs.getString(2), "", "", "", "", ""});
+                        tmdlNotas.addRow(new Object[]{
+                                        DisCodigo,
+                                        rs.getString(2),
+                                        db.getNota(DisCodigo, 1),
+                                        db.getNota(DisCodigo, 2),
+                                        db.getNota(DisCodigo, 3),
+                                        db.getMedia(DisCodigo),
+                                        db.getQuantoFalta(DisCodigo)}
+                        );
                         break;
                     case Constants.Properties.Values.Periodo.BIMESTRE:
-                        tmdlNotas.addRow(new Object[]{rs.getString(2), "", "", "", "", "", ""});
+                        tmdlNotas.addRow(new Object[]{
+                                        DisCodigo,
+                                        rs.getString(2),
+                                        db.getNota(DisCodigo, 1),
+                                        db.getNota(DisCodigo, 2),
+                                        db.getNota(DisCodigo, 3),
+                                        db.getNota(DisCodigo, 4),
+                                        db.getMedia(DisCodigo),
+                                        db.getQuantoFalta(DisCodigo)}
+                        );
                         break;
                 }
 
-            }
-
-            rs = db.query("SELECT NOTCODIGO, NOTDISCIPLINA, NOTNOTA, NOTPERIODO FROM NOTAS");
-
-            while (rs.next())
-            {
-                for (int i = 0; i < codigos.length; i++)
-                {
-                    if (codigos[i][0] == rs.getInt(2))
-                    {
-                        switch (rs.getInt(4))
-                        {
-                            case 1:
-                                codigos[i][1] = rs.getInt(1);
-                                tmdlNotas.setValueAt(rs.getFloat(3), i, 1);
-                                break;
-
-                            case 2:
-                                codigos[i][2] = rs.getInt(1);
-                                tmdlNotas.setValueAt(rs.getFloat(3), i, 2);
-                                break;
-
-                            case 3:
-                                codigos[i][3] = rs.getInt(1);
-                                tmdlNotas.setValueAt(rs.getFloat(3), i, 3);
-                                break;
-
-                            case 4:
-                                codigos[i][4] = rs.getInt(1);
-                                tmdlNotas.setValueAt(rs.getFloat(3), i, 4);
-                                break;
-                        }
-                    }
-                }
             }
 
             db.close();
@@ -187,6 +180,8 @@ public class JanelaBoletim extends JFrame
     {
         // Seta os headers da tabela
         ArrayList<String> colunas = new ArrayList<>();
+
+        colunas.add("DisCodigo");
 
         colunas.add("Disciplina");
 
@@ -229,6 +224,8 @@ public class JanelaBoletim extends JFrame
 
         int tamNotas = 0;
 
+        tblBoletim.removeColumn(tblBoletim.getColumn("DisCodigo"));
+
         tblBoletim.getColumn("Disciplina").setPreferredWidth(100);
         tamNotas += 100;
 
@@ -260,16 +257,13 @@ public class JanelaBoletim extends JFrame
         tblBoletim.getColumn("Quanto falta").setPreferredWidth(TAMANHO_COLUNA_NOTAS + 30);
         tamNotas += TAMANHO_COLUNA_NOTAS + 30;
 
-        int numDisc = 0;
-        int numCol = 0;
-
         try
         {
             Database db = new Database();
 
             ResultSet rs = db.query("SELECT COUNT(*) FROM DISCIPLINAS");
 
-            numDisc = rs.getInt(1);
+            int numDisc = rs.getInt(1);
 
             sclTabela.setPreferredSize(new Dimension(tamNotas, 31 + (tblBoletim.getRowHeight() * numDisc)));
 
@@ -279,20 +273,32 @@ public class JanelaBoletim extends JFrame
             e.printStackTrace();
         }
 
-        // Inicializa a matriz de controle
+        // Seta as colunas de notas para alinhamento à direita
+
+        CellRenderer cellRenderer = new CellRenderer();
+//        cellRenderer.setHorizontalAlignment(SwingConstants.RIGHT);
 
         switch (periodo)
         {
             case Constants.Properties.Values.Periodo.SEMESTRE:
-                numCol += 2;
+                tblBoletim.getColumn("1o Sem").setCellRenderer(cellRenderer);
+                tblBoletim.getColumn("2o Sem").setCellRenderer(cellRenderer);
+                break;
             case Constants.Properties.Values.Periodo.TRIMESTRE:
-                numCol += 1;
+                tblBoletim.getColumn("1o Trim").setCellRenderer(cellRenderer);
+                tblBoletim.getColumn("2o Trim").setCellRenderer(cellRenderer);
+                tblBoletim.getColumn("3o Trim").setCellRenderer(cellRenderer);
+                break;
             case Constants.Properties.Values.Periodo.BIMESTRE:
-                numCol += 1;
+                tblBoletim.getColumn("1o Bim").setCellRenderer(cellRenderer);
+                tblBoletim.getColumn("2o Bim").setCellRenderer(cellRenderer);
+                tblBoletim.getColumn("3o Bim").setCellRenderer(cellRenderer);
+                tblBoletim.getColumn("4o Bim").setCellRenderer(cellRenderer);
+                break;
         }
 
-        numCol += 2;
-        codigos = new int[numDisc][numCol];
+        tblBoletim.getColumn("Media Final").setCellRenderer(cellRenderer);
+        tblBoletim.getColumn("Quanto falta").setCellRenderer(cellRenderer);
     }
 
     private void setProperties()
@@ -321,20 +327,6 @@ public class JanelaBoletim extends JFrame
         pesoTrab = Float.parseFloat(props.getProperty(Constants.Properties.Keys.PESO_TRABALHO));
     }
 
-    private class ButtonHandler implements ActionListener
-    {
-
-        @Override
-        public void actionPerformed(ActionEvent e)
-        {
-            if (e.getSource().equals(btnAdicionar))
-                new InterfaceNota(InterfaceNota.MODO_INCLUIR, 0, periodo);
-
-            if (e.getSource().equals(btnRemover))
-                removerNota();
-        }
-    }
-
     private void removerNota()
     {
         int opcao = JOptionPane.showConfirmDialog(null, "Tem certeza que deseja remover essa nota?", "Aviso", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
@@ -345,7 +337,10 @@ public class JanelaBoletim extends JFrame
             {
                 Database db = new Database();
 
-                int notCodigo = codigos[tblBoletim.getSelectedRow()][tblBoletim.getSelectedColumn()];
+                int DisCodigo = (int) tmdlNotas.getValueAt(tblBoletim.getSelectedRow(), 0);
+
+                int notCodigo = db.getNotCodigo(DisCodigo, tblBoletim.getSelectedColumn());
+
                 String sql = String.format("DELETE FROM NOTAS WHERE NOTCODIGO = %d", notCodigo);
                 db.execute(sql);
 
@@ -354,6 +349,82 @@ public class JanelaBoletim extends JFrame
             {
                 ex.printStackTrace();
             }
+        }
+    }
+
+    private class ButtonHandler implements ActionListener
+    {
+
+        @Override
+        public void actionPerformed(ActionEvent e)
+        {
+            if (e.getSource().equals(btnAdicionar))
+            {
+                if (tblBoletim.getSelectedRow() == -1)
+                    new InterfaceNota(InterfaceNota.MODO_INCLUIR, -1, -1, periodo);
+
+                int NotDisciplina = (int) tmdlNotas.getValueAt(tblBoletim.getSelectedRow(), 0);
+                int NotPeriodo = tblBoletim.getSelectedColumn();
+
+                if (NotPeriodo >= tblBoletim.getColumnCount() - 2 || tblBoletim.getSelectedColumn() == 0)
+                    JOptionPane.showMessageDialog(null, "Esse campo e preenchido automaticamente.", "Aviso", JOptionPane.WARNING_MESSAGE);
+                else if ((Float) tblBoletim.getValueAt(tblBoletim.getSelectedRow(), tblBoletim.getSelectedColumn()) != 0.0)
+                    JOptionPane.showMessageDialog(null, "Essa nota ja foi preenchida.\nPor favor, exclua a nota para poder adicionar.", "Aviso", JOptionPane.WARNING_MESSAGE);
+                else
+                    new InterfaceNota(InterfaceNota.MODO_INCLUIR, NotDisciplina, NotPeriodo, periodo);
+            }
+
+            if (e.getSource().equals(btnRemover))
+            {
+                if (tblBoletim.getSelectedColumn() >= tblBoletim.getColumnCount() - 2 || tblBoletim.getSelectedColumn() == 0)
+                    JOptionPane.showMessageDialog(null, "Esse campo e preenchido automaticamente.", "Aviso", JOptionPane.WARNING_MESSAGE);
+                else if ((Float) tblBoletim.getValueAt(tblBoletim.getSelectedRow(), tblBoletim.getSelectedColumn()) == 0.0)
+                    JOptionPane.showMessageDialog(null, "Essa nota ainda nao foi preenchida.\nPor favor, escolha outra nota.", "Aviso", JOptionPane.WARNING_MESSAGE);
+                else
+                    removerNota();
+
+            }
+
+            if (e.getSource().equals(btnAlterar))
+            {
+                int NotDisciplina = (int) tmdlNotas.getValueAt(tblBoletim.getSelectedRow(), 0);
+                int NotPeriodo = tblBoletim.getSelectedColumn();
+
+                if (tblBoletim.getSelectedColumn() >= tblBoletim.getColumnCount() - 2 || tblBoletim.getSelectedColumn() == 0)
+                    JOptionPane.showMessageDialog(null, "Esse campo e preenchido automaticamente.", "Aviso", JOptionPane.WARNING_MESSAGE);
+                else if ((Float) tblBoletim.getValueAt(tblBoletim.getSelectedRow(), tblBoletim.getSelectedColumn()) == 0.0)
+                    JOptionPane.showMessageDialog(null, "Essa nota ainda nao foi preenchida.\nPor favor, escolha outra nota.", "Aviso", JOptionPane.WARNING_MESSAGE);
+                else
+                    new InterfaceNota(InterfaceNota.MODO_ALTERAR, NotDisciplina, NotPeriodo, periodo);
+            }
+        }
+    }
+
+    private class CellRenderer extends DefaultTableCellRenderer
+    {
+        public CellRenderer()
+        {
+            setHorizontalAlignment(RIGHT);
+        }
+
+        @Override
+        public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column)
+        {
+            Component cell = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+
+            if (column < tblBoletim.getColumnCount() - 2)
+            {
+                if ((Float) value < media && (Float) value != 0.0)
+                {
+                    cell.setForeground(Color.RED);
+                }
+                else
+                {
+                    cell.setForeground(Color.BLACK);
+                }
+            }
+
+            return cell;
         }
     }
 }
